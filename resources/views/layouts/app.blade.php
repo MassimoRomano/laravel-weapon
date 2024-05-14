@@ -17,11 +17,11 @@
 
 <body>
 
-   @include('')
-   <main>
-    @yield('content')
-   </main>
-   @include('')
+    @include('partials.header')
+    <main>
+        @yield('content')
+    </main>
+    @include('partials.footer')
 
 </body>
 
