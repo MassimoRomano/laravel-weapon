@@ -13,7 +13,7 @@ class CharacterSeeder extends Seeder
      */
     public function run(): void
     {
-        $characters = config("characters.character");
+        $characters = config("characters.characters");
 
         foreach ($characters as $character) {
             $characters = new Character();
