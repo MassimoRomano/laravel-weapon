@@ -11,6 +11,6 @@ class CharacterController extends Controller
     {
 
         $characters = Character::orderBy('name')->get();
-        return view('guests.characters', compact('character'));
+        return view('guests.characters', compact('characters'));
     }
 }

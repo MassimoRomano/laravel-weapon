@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [WeaponController::class, 'index'])->name('home');
-Route::get('/characters', [CharacterController::class, 'characters'])->name('characters');
+Route::get('/weapon', [WeaponController::class, 'index'])->name('home');
+Route::get('/character',[CharacterController::class, 'index'])->name('characters');
