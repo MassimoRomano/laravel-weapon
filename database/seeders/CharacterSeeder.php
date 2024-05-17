@@ -19,7 +19,7 @@ class CharacterSeeder extends Seeder
             $characters = new Character();
             $characters->name = $character['name'];
             $characters->description = $character['description'];
-            $characters->attck = $character['attack'];
+            $characters->attack = $character['attack'];
             $characters->defense = $character['defense'];
             $characters->speed = $character['speed'];
             $characters->save();
