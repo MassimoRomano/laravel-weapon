@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->text('description')->nullable();
-            $table->string('attack', 50)->nullable();
-            $table->string('defense', 50)->nullable();
-            $table->string('speed', 25)->nullable();
+            $table->string('attack', 50);
+            $table->string('defense', 50);
+            $table->string('speed', 25);
             $table->timestamps();
         });
     }
