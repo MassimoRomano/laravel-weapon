@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\WeaponController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('guests.home');
-});
+Route::get('/', [WeaponController::class, 'index'])->name('home');
