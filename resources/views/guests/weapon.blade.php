@@ -14,7 +14,7 @@
                             <h5 class="card-text"><strong>Weight:</strong> {{$weapon->weight}}</h5>
                             <h5 class="card-text"><strong>Cost:</strong> {{$weapon->cost}}</h5>
                             <h5 class="card-text"><strong>Damage:</strong> {{$weapon->damage_dice}}</h5>
-                            <a class="btn btn-primary my-3" href="{{ route('guests.show_weapon', $weapon) }}">View</a>
+                            <a class="btn btn-primary my-4" href="{{ route('guests.show_weapon', $weapon) }}">Show</a>
                         </div>
                     </div>
                 </div>
