@@ -20,11 +20,11 @@ Route::view('/', 'home')->name('home');
 
 // Weapons
 Route::get('/weapon', [WeaponController::class, 'weapon'])->name('weapon');
-Route::get('/weapon{weapon}', [WeaponController::class, 'show'])->name('guests.show_weapon');
+Route::get('/weapon/{weapon}', [WeaponController::class, 'show'])->name('guests.show_weapon');
 
 // Characters
 Route::get('/character', [CharacterController::class, 'characters'])->name('characters');
-Route::get('/character{character}', [CharacterController::class, 'show'])->name('guests.show_character');
+Route::get('/character/{character}', [CharacterController::class, 'show'])->name('guests.show_character');
 
 // Laravel Breeze Auth
 Route::get('/dashboard', function () {
