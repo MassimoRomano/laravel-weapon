@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Character;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreCharacterRequest;
+use App\Http\Requests\UpdateCharacterRequest;
 
 class CharacterController extends Controller
 {
@@ -11,11 +13,11 @@ class CharacterController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    /* public function index()
     {
         $characters = Character::orderBy('name')->get();
         return view('guests.characters', compact('characters'));
-    }
+    } */
 
     public function characters()
     {
@@ -28,15 +30,20 @@ class CharacterController extends Controller
      */
     public function create()
     {
-        //
+        return view("characters.create");
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(StoreCharacterRequest $request)
     {
-        //
+        $val_data = $request->validated();
+
+
+        Character::create($val_data);
+
+        return to_route('characters.create');
     }
 
     /**
@@ -58,9 +65,13 @@ class CharacterController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(UpdateCharacterRequest $request, character $character)
     {
-        //
+        $val_data = $request->validated();
+
+        $character->update($val_data);
+
+        return to_route('guests.show_character');
     }
 
     /**

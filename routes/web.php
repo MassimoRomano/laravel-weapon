@@ -23,6 +23,7 @@ Route::get('/weapon/{weapon}', [WeaponController::class, 'show'])->name('guests.
 // Characters
 Route::get('/character', [CharacterController::class, 'characters'])->name('characters');
 Route::get('/character/{character}', [CharacterController::class, 'show'])->name('guests.show_character');
+Route::get('/characters', [CharacterController::class, 'create'])->name('characters.create');
 // Laravel Breeze Auth
 Route::get('/dashboard', function () {
     return view('dashboard');

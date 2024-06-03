@@ -3,6 +3,8 @@
 
 @section('content')
     <div class="container">
+        <a class="btn btn-danger my-4" href="{{ route('characters.create') }}">New Character</a>
+
         <div class="row">
             @foreach ($characters as $character)
                 <div class="col-4 my-3">
